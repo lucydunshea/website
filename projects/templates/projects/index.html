@@ -26,7 +26,7 @@
     </nav>
 
     <!-- Content Area with Project Cards -->
-    <div class="content">
+    <div class="cards">
         <h1 class="page-header">Projects</h1>
 
         <!-- Loop through projects and display cards -->
@@ -36,8 +36,8 @@
                     {% if project.hero_photo %}
                         <img class="card-image" src="{{project.hero_photo.url}}"></img>
                         {% endif %} 
-                    <a href="/projects/{{ project.id }}/">
-                        <h2>{{ project.title }}</h2>
+                    <a class="project-heading" href="/projects/{{ project.id }}/">
+                        <h2 class="project-heading">{{ project.title }}</h2>
                         <p>{{ project.description }}</p>
                     </a>
                 </div>
