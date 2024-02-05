@@ -10,7 +10,17 @@
 }
 
 .map-view {
+    position: fixed;
+    width: 0px;
+    height: 58px;
+    left: 60%;
+    top: 45px;
+    color: var(--green-80);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
     text-decoration: none;
+    transition: color 0.1s ease-in 100ms;
 }
 
 .map-view:visited {
@@ -54,7 +64,7 @@
     width: 0px;
     height: 58px;
     left: 70%;
-    top: 40px;
+    top: 45px;
     color: var(--green-80);
     font-family: Arial, sans-serif;
     font-weight: 700;
@@ -79,7 +89,7 @@
     width: 85px;
     height: 58px;
     left: 85%;
-    top: 40px;
+    top: 45px;
     color: var(--green-80);
     font-family: Arial, sans-serif;
     font-weight: 700;
