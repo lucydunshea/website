@@ -9,6 +9,21 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.map-view {
+    text-decoration: none;
+}
+
+.map-view:visited {
+    color: var(--green-80); 
+    
+}
+
+.map-view:hover {
+    text-shadow: 1px 2px 3px #00000042;
+    color: var(--green-80);
+
+}
+
 .home-view {
     position: fixed;
     width: 380px;
@@ -21,8 +36,6 @@
     font-size: 36px;
     text-decoration: none;
     transition: color 0.1s ease-in 100ms;
-    
-    
 }
 
 .home-view:visited {

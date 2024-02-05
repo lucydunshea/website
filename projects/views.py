@@ -5,7 +5,7 @@ from .models import Project
 
 # Create your views here.
 def index(request):
-    projects_list = Project.objects.order_by("pub_date")
+    projects_list = Project.objects.order_by("title")
     context = {"projects_list": projects_list}
     return render(request, "projects/index.html", context)
 
