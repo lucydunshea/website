@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/styleguide.css">
+    <link rel="stylesheet" href="/static/css/globals.css">
+</head>
+<body>
+
+<header>
+    {% for project in projects %}
+    <div class="projects">
+        <div class="div">
+            <div class="overlap-group">
+                <div class="rectangle"></div>
+                    <div class="rectangle-2"></div>
+                    </div>
+                    <div class="rectangle-3"></div>
+                        <div class="overlap"><div class="rectangle-4"></div></div>
+                            <p class="text-wrapper">
+                                Hello fella
+                            </p>
+                           
+                            <div class="text-wrapper-2">{{ project.title }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <!-- Add a clickable button on the left to return to the homepage -->
+        <a>Home</a>
+    </div>
+    <nav>
+        <!-- Navbar on the top right with projects and blog buttons -->
+        <a>Projects</a>
+        <a>Blog</a>
+    </nav>
+</header>
+
+<!-- Add the main content of your homepage here -->
+<div>
+    <h1>Welcome to Your Blog</h1>
+    <!-- Add your blog posts or any other content here -->
+</div>
+
+</body>
+</html>
+
+<div class="projects">
+    <div class="div">
+      <div class="overlap">
+        <div class="rectangle"></div>
+      </div>
+      <div class="group">
+        <div class="overlap-group">
+          <div class="block-outline"></div>
+          <div class="project-image-block"></div>
+        </div>
+        <p class="text-description">{{ project.description }}</p>
+        <div class="project-title">
+          {{ project.title }}
+        </div>
+      </div>
+      <div class="page-title">
+        PROJECTS
+      </div>
+      <div class="overlap-wrapper">
+        <div class="overlap-2">
+          <div class="home-view">
+            LUCY DUNSHEA
+          </div>
+          <div class="projects-view">
+            PROJECTS
+          </div>
+          <div class="blog-view">
+            BLOG
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

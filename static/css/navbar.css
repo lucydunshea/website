@@ -1,0 +1,92 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    height: 120px;
+    flex-shrink: 0;
+    background: var(--Lemon-10, #FEFEF8);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home-view {
+    position: fixed;
+    width: 380px;
+    height: 58px;
+    top: 30px;
+    left: 2%;
+    color: var(--green-80);
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    text-decoration: none;
+    transition: color 0.1s ease-in 100ms;
+    
+    
+}
+
+.home-view:visited {
+    color: var(--green-80); 
+    
+}
+
+.home-view:hover {
+    text-shadow: 1px 2px 3px #00000042;
+    color: var(--green-80);
+
+}
+
+.projects-view {
+    position: fixed;
+    width: 0px;
+    height: 58px;
+    left: 70%;
+    top: 40px;
+    color: var(--green-80);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.1s ease-in 100ms;
+}
+
+.projects-view:visited {
+    color: var(--green-80); 
+    
+}
+
+.projects-view:hover {
+    text-shadow: 1px 2px 3px #00000042;
+    color: var(--green-80);
+
+}
+
+.blog-view {
+    position: fixed;
+    width: 85px;
+    height: 58px;
+    left: 85%;
+    top: 40px;
+    color: var(--green-80);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.1s ease-in 100ms;
+}
+
+.blog-view:visited {
+    color: var(--green-80); 
+    
+}
+
+.blog-view:hover {
+    text-shadow: 1px 2px 3px #00000042;
+    color: var(--green-80);
+
+}
+
+body {
+    margin-top: 200px;
+    background-color: var(--lemon-10);
+  }
