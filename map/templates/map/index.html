@@ -27,10 +27,10 @@
             maxZoom: 19
         }).addTo(map);
     
-        var busLocations = '{{ bus_locations_json }}';
+        var busLocations = JSON.parse('{{ bus_locations_json|safe }}');;
         for (var i = 0; i < busLocations.length; i++) {
         var location = busLocations[i];
-        var marker = L.marker([location.lat, location.lon])
+        var marker = L.marker([location.fields.lat, location.fields.lon])
           .bindPopup('Bus ID: ' + location.bus_id + '<br>Status: ' + location.status)
           .addTo(map);
     }};

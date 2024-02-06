@@ -1,7 +1,6 @@
 from django_cron import CronJobBase, Schedule
 from map.views import get_bus_locations
 from map.models import BusLocation
-from django.contrib.gis.geos import Point
 
 class UpdateBusLocationsJob(CronJobBase):
     RUN_EVERY_MINS = 5  # adjust the frequency as needed
