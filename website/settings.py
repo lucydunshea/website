@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'leaflet',
+    'django_cron',
     'blog.apps.BlogConfig',
     'map.apps.MapConfig',
     'projects.apps.ProjectsConfig',
@@ -137,3 +138,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CRON_CLASSES = [
+    'map.cron.UpdateBusLocationsJob',
+]

@@ -1,6 +1,20 @@
 #map { 
     height: 600px;
-    width: 1400px;
+    width: 1200px;
     padding: 40px;
+    margin: 80px;
+}
+
+.title-text {
+    position:absolute;
+    left: 32%;
+    color: var(--green-80);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-decoration: none;
+}
+
+body { 
     margin: 20px;
 }

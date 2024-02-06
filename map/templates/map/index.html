@@ -15,13 +15,13 @@
   crossorigin=""/>
 </head>
 
-<h1 class="map-view">MAP</h1>
+<h1 class="title-text">Christchurch City</h1>
 <a href="/">Back</a>
 <div id="map">
     {% leaflet_map "map" callback="map_init" %}
 </div>
 
-<script type="text/javascript">
+<script>
     function map_init(map, options) {
         var lon = 172.6333
         var lat = -43.5299
@@ -29,6 +29,11 @@
         L.tileLayer('https://tiles-cdn.koordinates.com/services;key=5fd34ef40f0342578716600c8e641145/tiles/v4/layer=115053/EPSG:3857/{z}/{x}/{y}.png', {
             maxZoom: 19
         }).addTo(map);
-    }
+        
+        var busLocations = L.geoJSON('{{ bus_locations }}').addTo(map);
+    
+
+    };
+   
 </script>
 </html>

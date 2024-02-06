@@ -1,0 +1,21 @@
+{id: "1707184260_NWR673" vehicle 
+{ trip 
+{ trip_id: "5652" 
+start_time: "13:20:00" 
+start_date: "20240206" 
+schedule_relationship: SCHEDULED 
+route_id: "Oa_36_3" } 
+
+position { latitude: -43.54410934448242 
+            longitude: 172.66395568847656 
+            bearing: 50.16999816894531 
+            speed: 0.0 } 
+            
+current_stop_sequence: 95 
+current_status: IN_TRANSIT_TO 
+timestamp: 1707184260 
+stop_id: "37750" 
+vehicle { id: "NWR673" 
+            label: "NWR673" } 
+            
+occupancy_status: EMPTY }}
