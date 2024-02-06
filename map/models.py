@@ -17,11 +17,13 @@ class BusLocation(models.Model):
     start_time = models.CharField(max_length=50)
     date = models.CharField(max_length=50)
     route_id = models.CharField(max_length=50)
-    location = geomodels.PointField()
+    lat = models.FloatField()
+    lon = models.FloatField()
     status = models.CharField(max_length=50)
     timestamp = models.CharField(max_length=50)
     stop_id = models.CharField(max_length=50)
     bus_id = models.CharField(max_length=50)
         
     def __str__(self):
-        return f"Bus {self.bus_id} - ({self.location.x}, {self.location.y})"
+        return f"Bus {self.bus_id})"
+    

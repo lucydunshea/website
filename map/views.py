@@ -2,9 +2,10 @@ from django.shortcuts import render
 from google.transit import gtfs_realtime_pb2
 import urllib.request
 from .models import BusLocation
-from django.core.serializers import serialize
-from django.http import JsonResponse
+import json
 import logging
+from django.core import serializers
+from django.http import HttpResponse
 # Create your views here.
 
 logger = logging.getLogger(__name__)
@@ -61,22 +62,8 @@ def get_bus_locations():
 
 
 def index(request):
-    bus_locations = get_bus_locations()
-    # bus_locations_list = [
-    #     {
-    #         'trip_id': location.trip_id,
-    #         'start_time': location.start_time,
-    #         'date': location.date,
-    #         'route_id': location.route_id,
-    #         'lat': location.location.y,
-    #         'lon': location.location.x,
-    #         'status': location.status,
-    #         'timestamp': location.timestamp,
-    #         'stop_id': location.stop_id,
-    #         'bus_id': location.bus_id,
-    #     }
-    #     for location in bus_locations
-    # ]
-
-    # bus_locations_json = serialize('json', bus_locations_list)
-    return render (request, 'map/data.html', {'bus_locations': bus_locations})
+    JSONSerializer = serializers.get_serializer("json")
+    json_serializer = JSONSerializer()
+    bus_locations_json = json_serializer.serialize(BusLocation.objects.all())
+    return render(request, 'map/index.html', {"bus_locations_json": bus_locations_json})
+    
